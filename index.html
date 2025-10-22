@@ -1,10 +1,10 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Government Workforce Network LLC - Together, Protecting and Promoting Employee Well-Being">
-  <title>Government Workforce Network LLC</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Government Workforce Network LLC - Together, Protecting and Promoting Employee Well-Being" name="description"/>
+<title>Government Workforce Network LLC</title>
+<style>
     /* ===== Base ===== */
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -147,404 +147,423 @@
       .grid-2{ grid-template-columns:1fr; }
     }
   </style>
-</head>
+<style>
+/* === GWN minimal visual fixes (layout untouched) === */
+.hero{
+  /* Soft light-blue -> white gradient behind hero image */
+  background: linear-gradient(180deg, #1a46a3 0%, #ffffff 100%) !important;
+  padding-top: 32px;
+  padding-bottom: 14px;
+}
+/* Keep hero text below image and never overlay faces */
+.hero .hero-content, .hero .content, .hero-content{
+  position: static !important;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Contained hero photo (no crop), centered, rounded 20px */
+.hero img.hero-photo{
+  display: block !important;
+  width: 100% !important;
+  max-height: 760px !important; /* magazine-style taller hero */
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 20px !important;
+  margin: 0 auto !important;
+  box-shadow: none !important; /* clean & flat */
+}
+
+/* Undo any absolute-placed hero image rules from old styles */
+.hero img{ position: static !important; }
+
+/* De-zoom all other photos without changing card sizes/spacing */
+#programs img,
+#paid img,
+#free img,
+.programs img,
+.services img,
+.card img,
+.svc-img img,
+.service-card img,
+.community-card img{
+  object-fit: contain !important;
+  object-position: center !important;
+}
+</style></head>
 <body>
-
 <header>
-  <nav class="container">
-    <div class="logo">
-      <img src="logo.jpg" alt="Government Workforce Network LLC Logo">
-      <span class="logo-text">Government Workforce Network LLC</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#programs">Programs</a></li>
-      <li><a href="#services">Paid Services</a></li>
-      <li><a href="#community-services">Free Services</a></li>
-      <li><a href="mailto:governmentworkforcenetwork@protonmail.com" class="nav-get-involved">Get Involved</a></li>
-    </ul>
-  </nav>
+<nav class="container">
+<div class="logo">
+<img alt="Government Workforce Network LLC Logo" src="logo.jpg"/>
+<span class="logo-text">Government Workforce Network LLC</span>
+</div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#services">Paid Services</a></li>
+<li><a href="#community-services">Free Services</a></li>
+<li><a class="nav-get-involved" href="mailto:governmentworkforcenetwork@protonmail.com">Get Involved</a></li>
+</ul>
+</nav>
 </header>
-
 <section class="hero">
-  <div class="container hero-content">
-    <h1>Together, Protecting and Promoting Employee Well-Being</h1>
-  </div>
+<div class="container hero-content">
+<h1>Together, Protecting and Promoting Employee Well-Being</h1>
+</div>
 </section>
-<section id="about" class="section">
-  <div class="container">
-    <div class="title-wrap">
-      <h2 class="section-title dark">Lead With Who You Serve</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="panel" style="max-width:900px; margin:0 auto 40px;">
+<section class="section" id="about">
+<div class="container">
+<div class="title-wrap">
+<h2 class="section-title dark">Lead With Who You Serve</h2>
+<div class="rule"></div>
+</div>
+<div class="panel" style="max-width:900px; margin:0 auto 40px;">
       Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.
     </div>
-
-<section id="about" class="section">
-  <div class="container">
-    <div class="title-wrap">
-      <h2 class="section-title dark">Mission</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="panel" style="max-width:900px; margin:0 auto 40px;">
+<section class="section" id="about">
+<div class="container">
+<div class="title-wrap">
+<h2 class="section-title dark">Mission</h2>
+<div class="rule"></div>
+</div>
+<div class="panel" style="max-width:900px; margin:0 auto 40px;">
       To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.
     </div>
-
-    <div class="title-wrap">
-      <h2 class="section-title dark">Vision</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="panel" style="max-width:900px; margin:0 auto 20px;">
+<div class="title-wrap">
+<h2 class="section-title dark">Vision</h2>
+<div class="rule"></div>
+</div>
+<div class="panel" style="max-width:900px; margin:0 auto 20px;">
       A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.
     </div>
-
-    <div class="title-wrap" style="margin-top:40px;">
-      <h2 class="section-title dark">Glow + Grow Initiative</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="panel" style="max-width:900px; margin:0 auto;">
-      <strong>Empowerment, Connection, and Purpose</strong><br>
+<div class="title-wrap" style="margin-top:40px;">
+<h2 class="section-title dark">Glow + Grow Initiative</h2>
+<div class="rule"></div>
+</div>
+<div class="panel" style="max-width:900px; margin:0 auto;">
+<strong>Empowerment, Connection, and Purpose</strong><br/>
       A signature series celebrating service and growth through empowerment circles, mixers, and recognition galas — blending learning with inspiration and joy.
     </div>
-  </div>
+</div>
 </section>
-
-<section id="programs" class="section">
-  <div class="container">
-    <div class="title-wrap">
-      <h2 class="section-title dark">Our Programs</h2>
-      <div class="rule"></div>
-    </div>
-
-    <div class="cards-grid">
-      <article class="service-card">
-        <div class="svc-img"><img src="sip-and-serve.png" alt="Sip & Serve event"></div>
-        <div class="svc-body">
-          <h3>Sip &amp; Serve</h3>
-          <p><strong>Meaningful Conversations That Inspire</strong></p>
-          <p>A relaxed networking experience where purpose meets people. Build authentic connections, share stories, and find your next collaboration over coffee.</p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="svc-img"><img src="recognition-galas.png" alt="Recognition gala"></div>
-        <div class="svc-body">
-          <h3>Recognition Galas</h3>
-          <p><strong>Celebrating Courage, Service, and Success</strong></p>
-          <p>Honoring public servants and veterans who inspire through dedication, leadership, and compassion. Every story deserves the spotlight.</p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="svc-img"><img src="professional-growth.png" alt="Professional growth workshops"></div>
-        <div class="svc-body">
-          <h3>Professional Growth</h3>
-          <p><strong>Empowerment Circles, Coaching &amp; Confidence Building</strong></p>
-          <p>Practical programs for professional success — from interview prep and leadership development to performance and public-speaking coaching.</p>
-        </div>
-      </article>
-    </div>
-  </div>
+<section class="section" id="programs">
+<div class="container">
+<div class="title-wrap">
+<h2 class="section-title dark">Our Programs</h2>
+<div class="rule"></div>
+</div>
+<div class="cards-grid">
+<article class="service-card">
+<div class="svc-img"><img alt="Sip &amp; Serve event" src="sip-and-serve.png"/></div>
+<div class="svc-body">
+<h3>Sip &amp; Serve</h3>
+<p><strong>Meaningful Conversations That Inspire</strong></p>
+<p>A relaxed networking experience where purpose meets people. Build authentic connections, share stories, and find your next collaboration over coffee.</p>
+</div>
+</article>
+<article class="service-card">
+<div class="svc-img"><img alt="Recognition gala" src="recognition-galas.png"/></div>
+<div class="svc-body">
+<h3>Recognition Galas</h3>
+<p><strong>Celebrating Courage, Service, and Success</strong></p>
+<p>Honoring public servants and veterans who inspire through dedication, leadership, and compassion. Every story deserves the spotlight.</p>
+</div>
+</article>
+<article class="service-card">
+<div class="svc-img"><img alt="Professional growth workshops" src="professional-growth.png"/></div>
+<div class="svc-body">
+<h3>Professional Growth</h3>
+<p><strong>Empowerment Circles, Coaching &amp; Confidence Building</strong></p>
+<p>Practical programs for professional success — from interview prep and leadership development to performance and public-speaking coaching.</p>
+</div>
+</article>
+</div>
+</div>
 </section>
-
-<section id="be-glow" class="section">
-  <div class="container">
-    <div class="title-wrap">
-      <h2 class="section-title dark">Be Part of the Glow</h2>
-      <div class="rule"></div>
-    </div>
-    <!-- CHANGED: added margin-bottom to create space before the cards -->
-    <p class="section-sub" style="text-align:center; color:#e8eef9; margin-bottom:40px;">
+<section class="section" id="be-glow">
+<div class="container">
+<div class="title-wrap">
+<h2 class="section-title dark">Be Part of the Glow</h2>
+<div class="rule"></div>
+</div>
+<!-- CHANGED: added margin-bottom to create space before the cards -->
+<p class="section-sub" style="text-align:center; color:#e8eef9; margin-bottom:40px;">
       Let's build a movement together — one that unites connection, compassion, and community across the government workforce and beyond.
     </p>
-
-    <div class="cards-grid">
-      <article class="service-card">
-        <div class="svc-img"><img src="sponsors-partners.png" alt="Sponsors & Partners"></div>
-        <div class="svc-body">
-          <a href="mailto:governmentworkforcenetwork@protonmail.com?subject=Partnership%20Inquiry" class="btn">Click Here</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="svc-img"><img src="join-us.png" alt="Join us community"></div>
-        <div class="svc-body">
-          <a href="https://www.instagram.com/government_workforce_network?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="btn">Click Here</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="svc-img"><img src="recruiting-directors.png" alt="Recruiting Country Directors"></div>
-        <div class="svc-body">
-          <a href="mailto:governmentworkforcenetwork@protonmail.com?subject=Country%20Director%20Application" class="btn">Click Here</a>
-        </div>
-      </article>
-    </div>
-  </div>
+<div class="cards-grid">
+<article class="service-card">
+<div class="svc-img"><img alt="Sponsors &amp; Partners" src="sponsors-partners.png"/></div>
+<div class="svc-body">
+<a class="btn" href="mailto:governmentworkforcenetwork@protonmail.com?subject=Partnership%20Inquiry">Click Here</a>
+</div>
+</article>
+<article class="service-card">
+<div class="svc-img"><img alt="Join us community" src="join-us.png"/></div>
+<div class="svc-body">
+<a class="btn" href="https://www.instagram.com/government_workforce_network?igsh=NTc4MTIwNjQ2YQ%3D%3D&amp;utm_source=qr" rel="noopener noreferrer" target="_blank">Click Here</a>
+</div>
+</article>
+<article class="service-card">
+<div class="svc-img"><img alt="Recruiting Country Directors" src="recruiting-directors.png"/></div>
+<div class="svc-body">
+<a class="btn" href="mailto:governmentworkforcenetwork@protonmail.com?subject=Country%20Director%20Application">Click Here</a>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <!-- ======= Paid Services ======= -->
-<section id="services" class="section">
-  <div class="container">
-    <div class="title-wrap">
-      <h2 class="section-title dark">Professional &amp; Organizational Services</h2>
-      <div class="rule"></div>
-    </div>
-
-    <div class="cards-grid">
-      <article class="service-card">
-        <div class="svc-img"><img src="service-job-postings.jpg" alt="Managers reviewing job postings"></div>
-        <div class="svc-body">
-          <h3>Advertise Your Job Openings</h3>
-          <p>Reach our mission-aligned audience and attract top talent. Rate: $75 per 30-day listing</p>
-          <button class="btn" onclick="openModal('jobModal')">Click Here</button>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="svc-img"><img src="service-grant-writing.png" alt="Grant writing support"></div>
-        <div class="svc-body">
-          <h3>Grant Writing &amp; Funding Support</h3>
-          <p>From strategy to submission. Packages start at $1,499 — includes research, proposal writing, and submission support.</p>
-          <button class="btn" onclick="openModal('grantModal')">Click Here</button>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="svc-img"><img src="service-website-dev.png" alt="Website development planning"></div>
-        <div class="svc-body">
-          <h3>Website Development (Nonprofits &amp; Startups)</h3>
-          <p>From concept to live launch. Packages start at $999 — includes full development, design customization, and launch support.</p>
-          <button class="btn" onclick="openModal('webModal')">Click Here</button>
-        </div>
-      </article>
-    </div>
-  </div>
+<section class="section" id="services">
+<div class="container">
+<div class="title-wrap">
+<h2 class="section-title dark">Professional &amp; Organizational Services</h2>
+<div class="rule"></div>
+</div>
+<div class="cards-grid">
+<article class="service-card">
+<div class="svc-img"><img alt="Managers reviewing job postings" src="service-job-postings.jpg"/></div>
+<div class="svc-body">
+<h3>Advertise Your Job Openings</h3>
+<p>Reach our mission-aligned audience and attract top talent. Rate: $75 per 30-day listing</p>
+<button class="btn" onclick="openModal('jobModal')">Click Here</button>
+</div>
+</article>
+<article class="service-card">
+<div class="svc-img"><img alt="Grant writing support" src="service-grant-writing.png"/></div>
+<div class="svc-body">
+<h3>Grant Writing &amp; Funding Support</h3>
+<p>From strategy to submission. Packages start at $1,499 — includes research, proposal writing, and submission support.</p>
+<button class="btn" onclick="openModal('grantModal')">Click Here</button>
+</div>
+</article>
+<article class="service-card">
+<div class="svc-img"><img alt="Website development planning" src="service-website-dev.png"/></div>
+<div class="svc-body">
+<h3>Website Development (Nonprofits &amp; Startups)</h3>
+<p>From concept to live launch. Packages start at $999 — includes full development, design customization, and launch support.</p>
+<button class="btn" onclick="openModal('webModal')">Click Here</button>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <!-- ======= Community Free Services ======= -->
-<section id="community-services" class="section">
-  <div class="container">
-    <div class="title-wrap">
-      <h2 class="section-title" style="color:var(--brand-green);">Community Free Services (USA Only)</h2>
-      <div class="rule" style="background:var(--brand-green); box-shadow:0 6px 16px rgba(46,139,87,.35);"></div>
-    </div>
-    <p class="section-sub" style="max-width:860px; margin:0 auto 28px; color:#223; text-align:center;">
+<section class="section" id="community-services">
+<div class="container">
+<div class="title-wrap">
+<h2 class="section-title" style="color:var(--brand-green);">Community Free Services (USA Only)</h2>
+<div class="rule" style="background:var(--brand-green); box-shadow:0 6px 16px rgba(46,139,87,.35);"></div>
+</div>
+<p class="section-sub" style="max-width:860px; margin:0 auto 28px; color:#223; text-align:center;">
       Our way of giving back — complimentary services to support nonprofits and start-ups in building stronger communities and impactful missions.
     </p>
-
-    <div class="community-grid">
-      <!-- Card 1 -->
-      <article class="community-card">
-        <img src="free-jobposting.png" alt="Nonprofit team posting a job opening">
-        <div class="body">
-          <h3>Free Job Posting</h3>
-          <p style="margin:6px 0 0; color:#333; font-size:15px;">For Nonprofits &amp; Start-Ups (1 per year)</p>
-          <p style="margin:10px 0 0; color:#555; font-size:14px;">Reach mission-aligned professionals and grow your team.</p>
-          <button class="btn alt" onclick="openModal('fs-np-job')" style="margin-top:12px;">Click Here</button>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="community-card">
-        <img src="free-logodesign.png" alt="Designer creating a logo for a nonprofit">
-        <div class="body">
-          <h3>Free Logo Design</h3>
-          <p style="margin:6px 0 0; color:#333; font-size:15px;">For Nonprofits &amp; Start-Ups</p>
-          <p style="margin:10px 0 0; color:#555; font-size:14px;">Establish a professional brand identity at no cost.</p>
-          <button class="btn alt" onclick="openModal('fs-logo')" style="margin-top:12px;">Click Here</button>
-        </div>
-      </article>
-    </div>
-  </div>
+<div class="community-grid">
+<!-- Card 1 -->
+<article class="community-card">
+<img alt="Nonprofit team posting a job opening" src="free-jobposting.png"/>
+<div class="body">
+<h3>Free Job Posting</h3>
+<p style="margin:6px 0 0; color:#333; font-size:15px;">For Nonprofits &amp; Start-Ups (1 per year)</p>
+<p style="margin:10px 0 0; color:#555; font-size:14px;">Reach mission-aligned professionals and grow your team.</p>
+<button class="btn alt" onclick="openModal('fs-np-job')" style="margin-top:12px;">Click Here</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="community-card">
+<img alt="Designer creating a logo for a nonprofit" src="free-logodesign.png"/>
+<div class="body">
+<h3>Free Logo Design</h3>
+<p style="margin:6px 0 0; color:#333; font-size:15px;">For Nonprofits &amp; Start-Ups</p>
+<p style="margin:10px 0 0; color:#555; font-size:14px;">Establish a professional brand identity at no cost.</p>
+<button class="btn alt" onclick="openModal('fs-logo')" style="margin-top:12px;">Click Here</button>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <footer>
-  <p>© 2025 Government Workforce Network LLC. All rights reserved.</p>
-  <p>Together, Protecting and Promoting Employee Well-Being</p>
+<p>© 2025 Government Workforce Network LLC. All rights reserved.</p>
+<p>Together, Protecting and Promoting Employee Well-Being</p>
 </footer>
-
 <!-- ========== MODALS WITH NETLIFY FORMS ========== -->
-<div id="jobModal" class="modal-backdrop" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="jobModalTitle">
-    <div class="modal-header">
-      <h3 id="jobModalTitle">Advertise Your Job Opening — $99 / 30 days</h3>
-      <button class="modal-close" aria-label="Close" onclick="closeModal(this)">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="thankyou">Thank you! Your job posting was submitted.</div>
-      <form name="paid_job_posting" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
-        <input type="hidden" name="form-name" value="paid_job_posting">
-        <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="grid-2">
-          <div>
-            <label>Organization *</label>
-            <input type="text" name="Organization" required>
-          </div>
-          <div>
-            <label>Website</label>
-            <input type="url" name="Website">
-          </div>
-          <div>
-            <label>Contact Name *</label>
-            <input type="text" name="Contact Name" required>
-          </div>
-          <div>
-            <label>Email *</label>
-            <input type="email" name="Email" required>
-          </div>
-          <div>
-            <label>Phone</label>
-            <input type="tel" name="Phone">
-          </div>
-          <div>
-            <label>Job Title *</label>
-            <input type="text" name="Job Title" required>
-          </div>
-        </div>
-        <div class="grid-1">
-          <div>
-            <label>Location (City/State or Remote)</label>
-            <input type="text" name="Location">
-          </div>
-          <div>
-            <label>Job Description / How to Apply *</label>
-            <textarea name="Job Description" required></textarea>
-          </div>
-        </div>
-        <div class="actions">
-          <button type="submit" class="btn-primary">Submit Posting</button>
-          <button type="button" class="btn-secondary" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div aria-hidden="true" class="modal-backdrop" id="jobModal">
+<div aria-labelledby="jobModalTitle" class="modal" role="dialog">
+<div class="modal-header">
+<h3 id="jobModalTitle">Advertise Your Job Opening — $99 / 30 days</h3>
+<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
 </div>
-
-<div id="grantModal" class="modal-backdrop" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="grantModalTitle">
-    <div class="modal-header">
-      <h3 id="grantModalTitle">Grant Writing & Funding Support — Inquiry</h3>
-      <button class="modal-close" aria-label="Close" onclick="closeModal(this)">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="thankyou">Thank you! Your inquiry was sent.</div>
-      <form name="grant_writing_inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
-        <input type="hidden" name="form-name" value="grant_writing_inquiry">
-        <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="grid-2">
-          <div><label>Organization *</label><input name="Organization" required></div>
-          <div><label>Nonprofit Status</label><select name="501c Status"><option>501(c)(3)</option><option>In progress</option><option>Other</option></select></div>
-          <div><label>Contact Name *</label><input name="Contact Name" required></div>
-          <div><label>Email *</label><input type="email" name="Email" required></div>
-          <div><label>Phone</label><input type="tel" name="Phone"></div>
-          <div><label>Deadline</label><input type="date" name="Deadline"></div>
-        </div>
-        <div class="grid-1">
-          <div><label>Funding Goal / Program</label><input name="Funding Goal"></div>
-          <div><label>Project Summary *</label><textarea name="Project Summary" required></textarea></div>
-        </div>
-        <div class="actions">
-          <button type="submit" class="btn-primary">Submit Inquiry</button>
-          <button type="button" class="btn-secondary" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div class="modal-body">
+<div class="thankyou">Thank you! Your job posting was submitted.</div>
+<form data-netlify="true" method="POST" name="paid_job_posting" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<input name="form-name" type="hidden" value="paid_job_posting"/>
+<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+<div class="grid-2">
+<div>
+<label>Organization *</label>
+<input name="Organization" required="" type="text"/>
 </div>
-
-<div id="webModal" class="modal-backdrop" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="webModalTitle">
-    <div class="modal-header">
-      <h3 id="webModalTitle">Website Development (Nonprofits & Startups)</h3>
-      <button class="modal-close" aria-label="Close" onclick="closeModal(this)">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="thankyou">Thank you! We’ll get back to you shortly.</div>
-      <form name="website_dev_inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
-        <input type="hidden" name="form-name" value="website_dev_inquiry">
-        <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="grid-2">
-          <div><label>Organization *</label><input name="Organization" required></div>
-          <div><label>Type *</label><select name="Type" required><option>Nonprofit</option><option>Startup</option></select></div>
-          <div><label>Contact Name *</label><input name="Contact Name" required></div>
-          <div><label>Email *</label><input type="email" name="Email" required></div>
-          <div><label>Estimated Budget</label><input name="Budget" placeholder="$1,000+"></div>
-          <div><label>Timeline Target</label><input type="text" name="Timeline" placeholder="e.g., 6–8 weeks"></div>
-        </div>
-        <div class="grid-1">
-          <div><label>Project Goals *</label><textarea name="Project Goals" required></textarea></div>
-        </div>
-        <div class="actions">
-          <button type="submit" class="btn-primary">Submit Request</button>
-          <button type="button" class="btn-secondary" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div>
+<label>Website</label>
+<input name="Website" type="url"/>
 </div>
-
+<div>
+<label>Contact Name *</label>
+<input name="Contact Name" required="" type="text"/>
+</div>
+<div>
+<label>Email *</label>
+<input name="Email" required="" type="email"/>
+</div>
+<div>
+<label>Phone</label>
+<input name="Phone" type="tel"/>
+</div>
+<div>
+<label>Job Title *</label>
+<input name="Job Title" required="" type="text"/>
+</div>
+</div>
+<div class="grid-1">
+<div>
+<label>Location (City/State or Remote)</label>
+<input name="Location" type="text"/>
+</div>
+<div>
+<label>Job Description / How to Apply *</label>
+<textarea name="Job Description" required=""></textarea>
+</div>
+</div>
+<div class="actions">
+<button class="btn-primary" type="submit">Submit Posting</button>
+<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal-backdrop" id="grantModal">
+<div aria-labelledby="grantModalTitle" class="modal" role="dialog">
+<div class="modal-header">
+<h3 id="grantModalTitle">Grant Writing &amp; Funding Support — Inquiry</h3>
+<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
+</div>
+<div class="modal-body">
+<div class="thankyou">Thank you! Your inquiry was sent.</div>
+<form data-netlify="true" method="POST" name="grant_writing_inquiry" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<input name="form-name" type="hidden" value="grant_writing_inquiry"/>
+<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+<div class="grid-2">
+<div><label>Organization *</label><input name="Organization" required=""/></div>
+<div><label>Nonprofit Status</label><select name="501c Status"><option>501(c)(3)</option><option>In progress</option><option>Other</option></select></div>
+<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
+<div><label>Email *</label><input name="Email" required="" type="email"/></div>
+<div><label>Phone</label><input name="Phone" type="tel"/></div>
+<div><label>Deadline</label><input name="Deadline" type="date"/></div>
+</div>
+<div class="grid-1">
+<div><label>Funding Goal / Program</label><input name="Funding Goal"/></div>
+<div><label>Project Summary *</label><textarea name="Project Summary" required=""></textarea></div>
+</div>
+<div class="actions">
+<button class="btn-primary" type="submit">Submit Inquiry</button>
+<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal-backdrop" id="webModal">
+<div aria-labelledby="webModalTitle" class="modal" role="dialog">
+<div class="modal-header">
+<h3 id="webModalTitle">Website Development (Nonprofits &amp; Startups)</h3>
+<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
+</div>
+<div class="modal-body">
+<div class="thankyou">Thank you! We’ll get back to you shortly.</div>
+<form data-netlify="true" method="POST" name="website_dev_inquiry" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<input name="form-name" type="hidden" value="website_dev_inquiry"/>
+<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+<div class="grid-2">
+<div><label>Organization *</label><input name="Organization" required=""/></div>
+<div><label>Type *</label><select name="Type" required=""><option>Nonprofit</option><option>Startup</option></select></div>
+<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
+<div><label>Email *</label><input name="Email" required="" type="email"/></div>
+<div><label>Estimated Budget</label><input name="Budget" placeholder="$1,000+"/></div>
+<div><label>Timeline Target</label><input name="Timeline" placeholder="e.g., 6–8 weeks" type="text"/></div>
+</div>
+<div class="grid-1">
+<div><label>Project Goals *</label><textarea name="Project Goals" required=""></textarea></div>
+</div>
+<div class="actions">
+<button class="btn-primary" type="submit">Submit Request</button>
+<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
 <!-- Community Free Services: Free Job Posting -->
-<div id="fs-np-job" class="modal-backdrop" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="fsJobTitle">
-    <div class="modal-header">
-      <h3 id="fsJobTitle">Free Job Posting (Nonprofits & Startups)</h3>
-      <button class="modal-close" aria-label="Close" onclick="closeModal(this)">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="thankyou">Thanks! Your free job posting request was received.</div>
-      <form name="free_job_posting_np" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
-        <input type="hidden" name="form-name" value="free_job_posting_np">
-        <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="grid-2">
-          <div><label>Organization *</label><input name="Organization" required></div>
-          <div><label>Nonprofit or Startup? *</label><select name="Org Type" required><option>Nonprofit</option><option>Startup</option></select></div>
-          <div><label>Contact Name *</label><input name="Contact Name" required></div>
-          <div><label>Email *</label><input type="email" name="Email" required></div>
-        </div>
-        <div class="grid-1">
-          <div><label>Job Title *</label><input name="Job Title" required></div>
-          <div><label>Job Details / Apply Link *</label><textarea name="Job Details" required></textarea></div>
-        </div>
-        <div class="actions">
-          <button type="submit" class="btn-primary">Submit</button>
-          <button type="button" class="btn-secondary" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div aria-hidden="true" class="modal-backdrop" id="fs-np-job">
+<div aria-labelledby="fsJobTitle" class="modal" role="dialog">
+<div class="modal-header">
+<h3 id="fsJobTitle">Free Job Posting (Nonprofits &amp; Startups)</h3>
+<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
 </div>
-
+<div class="modal-body">
+<div class="thankyou">Thanks! Your free job posting request was received.</div>
+<form data-netlify="true" method="POST" name="free_job_posting_np" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<input name="form-name" type="hidden" value="free_job_posting_np"/>
+<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+<div class="grid-2">
+<div><label>Organization *</label><input name="Organization" required=""/></div>
+<div><label>Nonprofit or Startup? *</label><select name="Org Type" required=""><option>Nonprofit</option><option>Startup</option></select></div>
+<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
+<div><label>Email *</label><input name="Email" required="" type="email"/></div>
+</div>
+<div class="grid-1">
+<div><label>Job Title *</label><input name="Job Title" required=""/></div>
+<div><label>Job Details / Apply Link *</label><textarea name="Job Details" required=""></textarea></div>
+</div>
+<div class="actions">
+<button class="btn-primary" type="submit">Submit</button>
+<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
 <!-- Community Free Services: Free Logo Design -->
-<div id="fs-logo" class="modal-backdrop" aria-hidden="true">
-  <div class="modal" role="dialog" aria-labelledby="fsLogoTitle">
-    <div class="modal-header">
-      <h3 id="fsLogoTitle">Free Logo Design (Nonprofits & Startups)</h3>
-      <button class="modal-close" aria-label="Close" onclick="closeModal(this)">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="thankyou">Thanks! Your logo request was received.</div>
-      <form name="free_logo_design" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
-        <input type="hidden" name="form-name" value="free_logo_design">
-        <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="grid-2">
-          <div><label>Organization *</label><input name="Organization" required></div>
-          <div><label>Nonprofit or Startup? *</label><select name="Org Type" required><option>Nonprofit</option><option>Startup</option></select></div>
-          <div><label>Contact Name *</label><input name="Contact Name" required></div>
-          <div><label>Email *</label><input type="email" name="Email" required></div>
-        </div>
-        <div class="grid-1">
-          <div><label>Brand Description / Ideas *</label><textarea name="Brand Notes" required placeholder="Colors, vibe, symbols, sample links…"></textarea></div>
-        </div>
-        <div class="actions">
-          <button type="submit" class="btn-primary">Submit</button>
-          <button type="button" class="btn-secondary" onclick="closeModal(this)">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div aria-hidden="true" class="modal-backdrop" id="fs-logo">
+<div aria-labelledby="fsLogoTitle" class="modal" role="dialog">
+<div class="modal-header">
+<h3 id="fsLogoTitle">Free Logo Design (Nonprofits &amp; Startups)</h3>
+<button aria-label="Close" class="modal-close" onclick="closeModal(this)">×</button>
+</div>
+<div class="modal-body">
+<div class="thankyou">Thanks! Your logo request was received.</div>
+<form data-netlify="true" method="POST" name="free_logo_design" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<input name="form-name" type="hidden" value="free_logo_design"/>
+<p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
+<div class="grid-2">
+<div><label>Organization *</label><input name="Organization" required=""/></div>
+<div><label>Nonprofit or Startup? *</label><select name="Org Type" required=""><option>Nonprofit</option><option>Startup</option></select></div>
+<div><label>Contact Name *</label><input name="Contact Name" required=""/></div>
+<div><label>Email *</label><input name="Email" required="" type="email"/></div>
+</div>
+<div class="grid-1">
+<div><label>Brand Description / Ideas *</label><textarea name="Brand Notes" placeholder="Colors, vibe, symbols, sample links…" required=""></textarea></div>
+</div>
+<div class="actions">
+<button class="btn-primary" type="submit">Submit</button>
+<button class="btn-secondary" onclick="closeModal(this)" type="button">Cancel</button>
+</div>
+</form>
+</div>
+</div>
 </div>
 <!-- ========== /MODALS ========== -->
-
 <script>
   // Simple modal controls
   function openModal(id){
@@ -565,7 +584,28 @@
     return true; // allow Netlify to handle the submit
   }
 </script>
-
-</body>
+</div></section><script>
+/* === Ensure hero image (hero.png) is present, contained, and not overlapped === */
+(function(){
+  var hero = document.querySelector('.hero');
+  if(!hero) return;
+  // Prefer an existing <img> inside hero; else create one
+  var img = hero.querySelector('img');
+  if(!img){
+    img = document.createElement('img');
+    hero.insertBefore(img, hero.firstChild);
+  } else {
+    // If found but not the first node, move it to the top so text remains below
+    if(hero.firstElementChild !== img){
+      hero.insertBefore(img, hero.firstElementChild);
+    }
+  }
+  img.src = 'hero.png';
+  img.alt = img.alt || 'Government Workforce Network — Hero';
+  img.classList.add('hero-photo');
+  img.style.position = 'static';
+  img.style.width = '100%';
+  img.style.height = 'auto';
+})();
+</script></body>
 </html>
-
