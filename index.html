@@ -191,12 +191,17 @@
   object-fit: contain !important;
   object-position: center !important;
 }
+
+/* === Minor headline nudge for balance (keep layout) === */
+.hero .hero-content, .hero .content, .hero-content{
+  margin-top: 6px !important; /* was 16px */
+}
 </style></head>
 <body>
 <header>
 <nav class="container">
-<div class="logo">
-<img alt="Government Workforce Network LLC Logo" src="logo.jpg"/>
+<div class="logo"><picture><source srcset="logo.png" type="image/png"/><img alt="Government Workforce Network LLC Logo" loading="eager" src="logo.jpg"/></picture>
+
 <span class="logo-text">Government Workforce Network LLC</span>
 </div>
 <ul class="nav-links">
