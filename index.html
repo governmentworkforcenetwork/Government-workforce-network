@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -176,8 +177,6 @@ white-space: nowrap; /* Keeps all items in one line */
 
 }
 
-
-
 header nav ul li {
 
 flex: 0 1 auto; /* Prevents items from stretching unevenly */
@@ -185,8 +184,6 @@ flex: 0 1 auto; /* Prevents items from stretching unevenly */
 text-align: center;
 
 }
-
-
 
 header nav ul li a {
 
@@ -206,8 +203,6 @@ padding-bottom: 4px;
 
 }
 
-
-
 /* Adds a subtle gold underline on hover */
 
 header nav ul li a:hover {
@@ -217,8 +212,6 @@ color: var(--accent);
 border-bottom: 2px solid var(--accent);
 
 }
-
-
 
 /* Fix for mobile */
 
@@ -242,6 +235,231 @@ header a[href="#about"], nav a[href="#about"] {
 
 margin-left: 70px !important; 
 
+}
+
+/* ===== HERO SECTION WITH FADE-IN IMAGE ===== */
+#hero {
+  position: relative;
+  height: 100vh;
+  background: url("assets/hero-group-photo.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  opacity: 0;                    /* Start transparent */
+  animation: fadeBg 2.5s ease-in-out forwards; /* Background fade-in */
+}
+
+/* Subtle overlay for readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Logo */
+.hero-logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 0.8s; /* starts after background fades in */
+}
+
+/* Blurb */
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  animation: fadeInUp 1.4s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+/* Animations */
+@keyframes fadeBg {
+  0% { opacity: 0; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero {
+    height: 75vh;
+  }
+  .hero-logo {
+    width: 90px;
+  }
+  .hero-content h1 {
+    font-size: 1.4rem;
+    padding: 0 15px;
+  }
+}
+/* HERO IMAGE CONTAINER */
+.hero-image {
+  position: relative;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1.6s ease-out forwards;
+  animation-delay: 1.6s;
+}
+
+/* SOFT GLOW BEHIND PHOTO */
+.hero-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.15) 45%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  filter: blur(40px);
+  z-index: 1;
+}
+
+/* TEAM PHOTO */
+.hero-image img {
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hero-glow {
+    width: 300px;
+    height: 300px;
+    filter: blur(25px);
+  }
+  .hero-image img {
+    width: 300px;
+  }
+}
+<div class="talent-container">
+  <div class="talent-card"> ... </div>
+  <div class="talent-card"> ... </div>
+</div>
+
+<style>
+  .talent-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .talent-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+/* ===== Section Titles (Lead With, Mission, Vision) ===== */
+.section-title {
+  margin-top: 40px;  /* reduced top spacing */
+  margin-bottom: 15px; /* tightens below title */
+  text-align: center;
+}
+/* ===== Content Boxes (Mission, Vision, etc.) ===== */
+.about-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin: 40px auto; /* reduces top gap between title & box */
+  max-width: 700px;
+  width: 85%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+/* Layout for the 3-column section */
+.three-columns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* stacks on mobile */
+  margin-top: 40px;
+}
+
+.info-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 25px 30px;
+  width: 300px; /* each card width */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.info-card h3 {
+  margin-bottom: 15px;
+  color: #002855; /* navy tone */
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.about-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin: 0 auto 40px;
+  max-width: 800px;
+  text-align: center;
+}
+/* Fix anchor scroll position for 'About' section */
+#about {
+  scroll-margin-top: 40px; /* adjust this number based on your navbar height */
+  padding-top: 20px; /* optional small spacing for breathing room */
 }
 </style>
 <style>
@@ -447,46 +665,43 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 </ul>
 </nav>
 </header>
-<section class="hero">
-<div class="container hero-content">
-<h1>Together, Protecting and Promoting Employee Well-Being</h1>
-</div>
+<section id="hero">
+  <div class="hero-overlay fade-bg">
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="Government Workforce Network Logo" class="hero-logo fade-in" />
+      <h1 class="fade-in-delayed">
+        Together, Protecting and Promoting Employee Well-Being
+      </h1>
+      <div class="hero-image fade-in-delayed-2">
+        <div class="hero-glow"></div>
+        <img src="assets/hero-diverse-team.png" alt="Diverse Workforce Team" />
+      </div>
+    </div>
+  </div>
 </section>
-<section class="section" id="about">
-<div class="container">
-<div class="title-wrap">
-<h2 class="section-title dark">Lead With Who You Serve</h2>
-<div class="rule"></div>
-</div>
-<div class="panel" style="max-width:900px; margin:0 auto 40px;">
-Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.
-</div>
-<section class="section" id="about">
-<div class="container">
-<div class="title-wrap">
-<h2 class="section-title dark">Mission</h2>
-<div class="rule"></div>
-</div>
-<div class="panel" style="max-width:900px; margin:0 auto 40px;">
-To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.
-</div>
-<div class="title-wrap">
-<h2 class="section-title dark">Vision</h2>
-<div class="rule"></div>
-</div>
-<div class="panel" style="max-width:900px; margin:0 auto 20px;">
-A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.
-</div>
-<div class="title-wrap" style="margin-top:40px;">
-<h2 class="section-title dark">Glow + Grow Initiative</h2>
-<div class="rule"></div>
-</div>
-<div class="panel" style="max-width:900px; margin:0 auto;">
-<strong>Empowerment, Connection, and Purpose</strong><br/>
-A signature series celebrating service and growth through empowerment circles, mixers, and recognition galas — blending learning with inspiration and joy.
-</div>
-</div>
+
+<section id="about">
+  <h2 class="section-title">Lead With Who You Serve</h2>
+  <div class="about-box">
+    <p> Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.</p>
+  </div>
+
+  <div class="three-columns">
+    <div class="info-card">
+      <h3>Mission</h3>
+      <p> To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.</p>
+    </div>
+    <div class="info-card">
+      <h3>Vision</h3>
+      <p> A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.</p>
+    </div>
+    <div class="info-card">
+      <h3>Glow + Grow Initiative</h3>
+      <p> Empowerment, Connection, and Purpose. A signature series celebrating service and growth through empowerment circles, mixers, and recognition galas — blending learning with inspiration and joy.</p>
+    </div>
+  </div>
 </section>
+
 <section class="section" id="programs">
 <div class="container">
 <div class="title-wrap">
@@ -616,8 +831,8 @@ Let's build a movement together — one that unites connection, compassion, and 
 </div>
 <div class="body">
 <h3>Talent Listing (Job Seekers)</h3>
-<p>Add your details to our private list shared with employers upon request.
-Service fee: $10/month.</p>
+<p>Add your details to our private list, shared with employers upon request.
+Service fee: $9.99/month.</p>
 </div>
 <a class="btn-primary" href="#job-seeker-form">Click Here</a>
 
@@ -998,8 +1213,6 @@ img.style.height = 'auto';
 </script></body>
 
 </html>
-
-
 
 
 
