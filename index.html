@@ -461,6 +461,19 @@ margin-left: 70px !important;
   scroll-margin-top: 40px; /* adjust this number based on your navbar height */
   padding-top: 20px; /* optional small spacing for breathing room */
 }
+  /* Mobile-only: make sure section headings are visible
+   when tapping nav links (About, Programs, Talent Connect, etc.) */
+@media (max-width: 768px) {
+  #about,
+  #programs,
+  #be-glow,
+  #services,
+  #talent-connect,
+  #community-services,
+  #job-openings {
+    scroll-margin-top: 120px;  /* clears the logo + stacked menu on phone */
+  }
+}
   /* MOBILE: smaller offset so headings are fully visible */
 @media (max-width: 768px) {
   #about,
@@ -1226,6 +1239,7 @@ img.style.height = 'auto';
 <script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI"></script></body>
 
 </html>
+
 
 
 
