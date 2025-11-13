@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -47,7 +48,7 @@ nav{ display:flex; justify-content:space-between; align-items:center; flex-wrap:
 .hero{
 position:relative; min-height:420px; display:flex; align-items:center;
 /* CHANGED: lightened overlay alphas for better photo visibility */
-background: linear-gradient(115deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 100%), url('hero.png') center/cover no-repeat;
+background: linear-gradient(115deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.45) 100%), url('hero.jpg') center/cover no-repeat;
 border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .hero-content{ text-align:center; color:#fff; padding:50px 0; }
@@ -240,7 +241,7 @@ margin-left: 70px !important;
 #hero {
   position: relative;
   height: 100vh;
-  background: url("assets/hero.png") center/cover no-repeat;
+  background: url("assets/hero-group-photo.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -639,7 +640,7 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 <body>
 <header>
 <nav class="container">
-<div class="logo"><picture><source srcset="logo.jpg" type="image/png"/><img alt="Government Workforce Network LLC Logo" loading="eager" src="logo.jpg"/></picture>
+<div class="logo"><picture><source srcset="logo.jpg" type="image/jpg"/><img alt="Government Workforce Network LLC Logo" loading="eager" src="logo.jpg"/></picture>
 
 
 <span class="logo-text">Government Workforce Network LLC</span>
@@ -667,14 +668,13 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 <section id="hero">
   <div class="hero-overlay fade-bg">
     <div class="hero-content">
-      <img src="assets/logo.png
-        " alt="Government Workforce Network Logo" class="hero-logo fade-in" />
+      <img src="logo.jpg" alt="Government Workforce Network Logo" class="hero-logo fade-in" />
       <h1 class="fade-in-delayed">
         Together, Protecting and Promoting Employee Well-Being
       </h1>
       <div class="hero-image fade-in-delayed-2">
         <div class="hero-glow"></div>
-        <img src="assets/hero.png" alt="Diverse Workforce Team" />
+        <img src="hero.png" alt="Diverse Workforce Team" />
       </div>
     </div>
   </div>
@@ -858,7 +858,7 @@ Service fee: $9.99/month.</p>
 <h4>Talent Listing — Job Seeker Form</h4>
 
 <!-- Netlify form -->
-<form name="talent-listing" method="POST" data-netlify="true">
+<form method='POST' name='talent-listing'>
 <input type="hidden" name="form-name" value="talent-listing">
 <div class="grid-2">
 <div><label>Full Name*<br><input type="text" name="name" required></label></div>
@@ -891,7 +891,7 @@ Service fee: $9.99/month.</p>
 <h4>Employer Talent Request</h4>
 <p>Tell us what you’re hiring for and we’ll share relevant candidate listings from our community.</p>
 
-<form name="employer-talent-request" method="POST" data-netlify="true">
+<form method='POST' name='employer-talent-request'>
 <input type="hidden" name="form-name" value="employer-talent-request">
 <div class="grid-2">
 <div><label>Organization*<br><input type="text" name="org" required></label></div>
@@ -999,7 +999,7 @@ How to add a job:
 </div>
 <div class="modal-body">
 <div class="thankyou">Thank you! Your job posting was submitted.</div>
-<form data-netlify="true" method="POST" name="paid_job_posting" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<form method='POST' name='paid_job_posting' onsubmit='return afterSubmit(this)'>
 <input name="form-name" type="hidden" value="paid_job_posting"/>
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
 <div class="grid-2">
@@ -1054,7 +1054,7 @@ How to add a job:
 </div>
 <div class="modal-body">
 <div class="thankyou">Thank you! Your inquiry was sent.</div>
-<form data-netlify="true" method="POST" name="grant_writing_inquiry" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<form method='POST' name='grant_writing_inquiry' onsubmit='return afterSubmit(this)'>
 <input name="form-name" type="hidden" value="grant_writing_inquiry"/>
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
 <div class="grid-2">
@@ -1085,7 +1085,7 @@ How to add a job:
 </div>
 <div class="modal-body">
 <div class="thankyou">Thank you! We’ll get back to you shortly.</div>
-<form data-netlify="true" method="POST" name="website_dev_inquiry" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<form method='POST' name='website_dev_inquiry' onsubmit='return afterSubmit(this)'>
 <input name="form-name" type="hidden" value="website_dev_inquiry"/>
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
 <div class="grid-2">
@@ -1116,7 +1116,7 @@ How to add a job:
 </div>
 <div class="modal-body">
 <div class="thankyou">Thanks! Your free job posting request was received.</div>
-<form data-netlify="true" method="POST" name="free_job_posting_np" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<form method='POST' name='free_job_posting_np' onsubmit='return afterSubmit(this)'>
 <input name="form-name" type="hidden" value="free_job_posting_np"/>
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
 <div class="grid-2">
@@ -1146,7 +1146,7 @@ How to add a job:
 </div>
 <div class="modal-body">
 <div class="thankyou">Thanks! Your logo request was received.</div>
-<form data-netlify="true" method="POST" name="free_logo_design" netlify-honeypot="bot-field" onsubmit="return afterSubmit(this)">
+<form method='POST' name='free_logo_design' onsubmit='return afterSubmit(this)'>
 <input name="form-name" type="hidden" value="free_logo_design"/>
 <p class="honeypot"><label>Don’t fill this out: <input name="bot-field"/></label></p>
 <div class="grid-2">
@@ -1210,10 +1210,10 @@ img.style.position = 'static';
 img.style.width = '100%';
 img.style.height = 'auto';
 })();
-</script></body>
+</script>
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI"></script></body>
 
 </html>
-
 
 
 
