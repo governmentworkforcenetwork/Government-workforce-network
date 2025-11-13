@@ -486,6 +486,16 @@ margin-left: 70px !important;
     scroll-margin-top: 60px;   /* smaller gap for phones */
   }
 }
+  .hero-logo {
+
+  display: block;
+
+  margin: 40px auto 24px;  /* centers it and gives breathing room above the heading */
+
+  max-width: 200px;        /* make it bigger; change to 220/240 if you want even larger */
+
+}
+
 </style>
 <style>
 /* === GWN minimal visual fixes (layout untouched) === */
@@ -707,7 +717,25 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 }
 
+/* DESKTOP: hide small header logo and center the nav links */
 
+@media (min-width: 769px) {
+
+  .logo {
+
+    display: none;             /* hides the small logo + 'Government Workforce Network LLC' in the header */
+
+  }
+
+
+
+  nav {
+
+    justify-content: center;   /* centers About / Programs / etc. across the top */
+
+  }
+
+}
 </style></head>
 <body>
 <header>
@@ -1369,6 +1397,7 @@ img.style.height = 'auto';
   });
 </script></body>
 </html>
+
 
 
 
