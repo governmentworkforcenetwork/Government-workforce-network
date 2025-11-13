@@ -660,7 +660,13 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 /* tiny helper for the checkbox row */
 .disclaimer-ack { margin-top: 10px; display:flex; gap:10px; align-items:flex-start; color:#fff; }
 .disclaimer-ack input { margin-top: 2px; }
-
+  
+  /* Mobile-only: make anchor jumps land with headings fully visible */
+@media (max-width: 768px) {
+  :target {
+    scroll-margin-top: 140px; /* fine-tune if needed (120–160 range) */
+  }
+}
 </style></head>
 <body>
 <header>
@@ -1239,6 +1245,7 @@ img.style.height = 'auto';
 <script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI"></script></body>
 
 </html>
+
 
 
 
