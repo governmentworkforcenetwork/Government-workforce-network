@@ -1242,9 +1242,44 @@ img.style.width = '100%';
 img.style.height = 'auto';
 })();
 </script>
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI"></script></body>
-
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI">
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Only customize behavior on mobile; desktop stays untouched
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+    const header = document.querySelector('header'); // your top bar
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (!isMobile()) {
+          // Let desktop behave with normal anchor jumps
+          return;
+        }
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (!target) {
+          // If there is no element with that id, do nothing special
+          return;
+        }
+        // Stop the normal jump
+        e.preventDefault();
+        const headerHeight = header ? header.offsetHeight : 0;
+        // Where we want to land: top of section minus header height,
+        // minus a little extra breathing room (16px)
+        const targetY = target.getBoundingClientRect().top + window.pageYOffset
+                        - headerHeight - 16;
+        window.scrollTo({
+          top: targetY,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script></body>
 </html>
+
 
 
 
