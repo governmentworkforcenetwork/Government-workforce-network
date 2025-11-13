@@ -667,6 +667,47 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
     scroll-margin-top: 140px; /* fine-tune if needed (120–160 range) */
   }
 }
+/* Invisible anchors used ONLY to adjust scroll position on mobile */
+
+.mobile-offset-anchor {
+
+  display: block;
+
+  position: relative;
+
+  height: 0;
+
+}
+
+
+
+/* Desktop / tablet: no offset (keeps your current behavior 100% the same) */
+
+@media (min-width: 769px) {
+
+  .mobile-offset-anchor {
+
+    top: 0;
+
+  }
+
+}
+
+
+
+/* Mobile: pull the anchor up so headings land just under the header */
+
+@media (max-width: 768px) {
+
+  .mobile-offset-anchor {
+
+    top: -140px;  /* adjust to -130 / -150 later if you want tiny tweaks */
+
+  }
+
+}
+
+
 </style></head>
 <body>
 <header>
@@ -677,17 +718,17 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 <span class="logo-text">Government Workforce Network LLC</span>
 </div>
 <ul class="nav-links">
-<li><a href="#about">About</a></li>
+<li><a href="#about-anchor">About</a></li>
 
-<li><a href="#programs">Programs</a></li>
+<li><a href="#programs-anchor">Programs</a></li>
 
-<li><a href="#be-glow">Glow Together</a></li>
+<li><a href="#be-glow-anchor">Glow Together</a></li>
 
-<li><a href="#services">Paid Services</a></li>
+<li><a href="#services-anchor">Paid Services</a></li>
 
-<li><a href="#talent-connect">Talent Connect</a></li>
+<li><a href="#talent-connect-anchor">Talent Connect</a></li>
 
-<li><a href="#community-services">Free Services</a></li>
+<li><a href="#community-services-anchor">Free Services</a></li>
 
 
 <li><a href="#job-openings">Job Openings</a></li>
@@ -710,7 +751,13 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
     </div>
   </div>
 </section>
+<span id="about-anchor" class="mobile-offset-anchor"></span>
 
+<section id="about">
+
+  <!-- Lead With Who You Serve + Mission/Vision content here -->
+
+</section>
 <section id="about">
   <h2 class="section-title">Lead With Who You Serve</h2>
   <div class="about-box">
@@ -731,6 +778,14 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
       <p> Empowerment, Connection, and Purpose. A signature series celebrating service and growth through empowerment circles, mixers, and recognition galas — blending learning with inspiration and joy.</p>
     </div>
   </div>
+</section>
+  
+<span id="programs-anchor" class="mobile-offset-anchor"></span>
+
+<section id="programs">
+
+  <!-- Our Programs content -->
+
 </section>
 
 <section class="section" id="programs">
@@ -769,6 +824,13 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 </article>
 </div>
 </div>
+</section>
+  <span id="be-glow-anchor" class="mobile-offset-anchor"></span>
+
+<section id="be-glow">
+
+  <!-- Be Part of the Glow content -->
+
 </section>
 <section class="section" id="be-glow">
 <div class="container">
@@ -811,6 +873,13 @@ Let's build a movement together — one that unites connection, compassion, and 
 </div>
 </section>
 <!-- ======= Paid Services ======= -->
+  <span id="services-anchor" class="mobile-offset-anchor"></span>
+
+<section id="services">
+
+  <!-- Professional & Organizational Services content -->
+
+</section>
 <section class="section" id="services">
 <div class="container">
 <div class="title-wrap">
@@ -847,6 +916,13 @@ Let's build a movement together — one that unites connection, compassion, and 
 </article>
 </div>
 </div>
+</section>
+  <span id="talent-connect-anchor" class="mobile-offset-anchor"></span>
+
+<section id="talent-connect">
+
+  <!-- Talent Connect cards + forms -->
+
 </section>
 <section id="talent-connect" class="section-pad">
 <div class="tc-wrap">
@@ -953,6 +1029,13 @@ Service fee: $9.99/month.</p>
 </div>
 </section>
 <!-- ======= Community Free Services ======= -->
+  <span id="community-services-anchor" class="mobile-offset-anchor"></span>
+
+<section id="community-services">
+
+  <!-- Community Free Services content -->
+
+</section>
 <section class="section" id="community-services">
 <div class="container">
 <div class="title-wrap">
@@ -989,6 +1072,13 @@ Our way of giving back — complimentary services to support nonprofits and star
 </div>
 
 <!-- ======= Job Openings ======= -->
+  <span id="job-openings-anchor" class="mobile-offset-anchor"></span>
+
+<section id="job-openings">
+
+  <!-- Job Openings content -->
+
+</section>
 <section class="section" id="job-openings" style="background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));">
 <div class="container">
 <div class="title-wrap">
@@ -1279,6 +1369,7 @@ img.style.height = 'auto';
   });
 </script></body>
 </html>
+
 
 
 
