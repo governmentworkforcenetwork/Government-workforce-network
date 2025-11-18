@@ -495,6 +495,50 @@ margin-left: 70px !important;
   max-width: 200px;        /* make it bigger; change to 320/340 if you want even larger */
 
 }
+/* Simple inline audio player inside the About box */
+.audio-player {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.audio-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #003366;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+}
+
+.audio-btn:active {
+  transform: translateY(1px);
+}
+
+.audio-label {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.audio-progress {
+  margin-top: 6px;
+  width: 100%;
+  max-width: 260px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.audio-progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: #f1c232; /* soft gold to match your accent */
+}
+
 
 </style>
 <style>
@@ -789,7 +833,20 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 <section id="about">
   <h2 class="section-title">Lead With Who You Serve</h2>
   <div class="about-box">
-    <p> Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.</p>
+    <p> Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.</p><br><br>
+<div class="audio-player">
+  <button id="about-audio-btn" type="button" class="audio-btn">
+    ▶ Listen
+  </button>
+  <span class="audio-label">Click to listen</span>
+
+  <div class="audio-progress">
+    <div class="audio-progress-bar"></div>
+  </div>
+
+  <audio id="about-audio" src="about-intro.mp3"></audio>
+</div>
+
   </div>
 
   <div class="three-columns">
@@ -1395,9 +1452,44 @@ img.style.height = 'auto';
       });
     });
   });
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const audio = document.getElementById('about-audio');
+  const btn = document.getElementById('about-audio-btn');
+  const progressBar = document.querySelector('.audio-progress-bar');
+
+  if (!audio || !btn || !progressBar) return;
+
+  // Toggle play/pause on button click
+  btn.addEventListener('click', function () {
+    if (audio.paused) {
+      audio.play().then(() => {
+        btn.textContent = '⏸ Pause';
+      }).catch(err => {
+        console.log('Audio playback blocked:', err);
+      });
+    } else {
+      audio.pause();
+      btn.textContent = '▶ Listen';
+    }
+  });
+
+  // Update progress bar
+  audio.addEventListener('timeupdate', function () {
+    if (!audio.duration) return;
+    const percent = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = percent + '%';
+  });
+
+  // Reset when audio ends
+  audio.addEventListener('ended', function () {
+    btn.textContent = '▶ Listen';
+    progressBar.style.width = '0%';
+  });
+});
+</script>
 </script></body>
 </html>
-
 
 
 
