@@ -803,16 +803,39 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 <section id="about">
   <h2 class="section-title">Lead With Who You Serve</h2>
   <div class="about-box">
-    <p> Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.</p>
-<div class="audio-player">
-  <button id="about-audio-btn" type="button" class="listen-link">
+  <p>
+
+  Founded by a retired public servant in 2025, the Government Workforce Network
+
+  unites people who’ve dedicated their lives to public service. We support
+
+  government employees, military members, and veterans with connection,
+
+  compassion, and career growth—beyond ranks, titles, or boundaries.
+
+</p>
+
+
+
+<p class="listen-label">
+
+  <button id="listen-button" class="listen-button" type="button">
+
     ▶ Click to listen
+
   </button>
 
-  <audio id="about-audio" preload="none">
-    <source src="assets/audio/audio-intro.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
+</p>
+
+
+
+<audio id="about-audio">
+
+  <source src="audio-intro.mp3" type="audio/mpeg">
+
+  Your browser does not support the audio element.
+
+</audio>
 </div>
   <div class="three-columns">
     <div class="info-card">
@@ -1513,8 +1536,46 @@ img.style.height = 'auto';
       btn.textContent = '▶ Click to listen';
     });
   });
-</script></body>
+</script>
+      <script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const listenBtn = document.getElementById('listen-button');
+
+    const aboutAudio = document.getElementById('about-audio');
+
+
+
+    if (listenBtn && aboutAudio) {
+
+      listenBtn.addEventListener('click', function () {
+
+        if (aboutAudio.paused) {
+
+          aboutAudio.play().catch(function () {
+
+            // Ignore any play error (like very strict autoplay rules)
+
+          });
+
+        } else {
+
+          aboutAudio.pause();
+
+        }
+
+      });
+
+    }
+
+  });
+
+</script>
+
+      </body>
 </html>
+
 
 
 
