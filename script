@@ -828,10 +828,9 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 </p>
 
 
+<audio id="about-audio" preload="none">
 
-<audio id="about-audio">
-
-  <source src="audio-intro.mp3" type="audio/mpeg">
+  <source src="audio-intro.mp3" type="audio/mpeg" />
 
   Your browser does not support the audio element.
 
@@ -1537,44 +1536,58 @@ img.style.height = 'auto';
     });
   });
 </script>
-      <script>
+     <script>
 
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-    const listenBtn = document.getElementById('listen-button');
+  const btn = document.getElementById('about-audio-btn');
 
-    const aboutAudio = document.getElementById('about-audio');
+  const audio = document.getElementById('about-audio');
+
+  if (!btn || !audio) return;
 
 
 
-    if (listenBtn && aboutAudio) {
+  btn.addEventListener('click', function () {
 
-      listenBtn.addEventListener('click', function () {
+    if (audio.paused) {
 
-        if (aboutAudio.paused) {
+      audio.play().then(function () {
 
-          aboutAudio.play().catch(function () {
+        btn.textContent = '⏸ Pause audio message';
 
-            // Ignore any play error (like very strict autoplay rules)
+      }).catch(function (err) {
 
-          });
+        console.log('Audio playback issue:', err);
 
-        } else {
-
-          aboutAudio.pause();
-
-        }
+        alert('Audio file could not be played. Please check the audio path.');
 
       });
+
+    } else {
+
+      audio.pause();
+
+      btn.textContent = '▶ Click to listen';
 
     }
 
   });
 
+
+
+  audio.addEventListener('ended', function () {
+
+    btn.textContent = '▶ Click to listen';
+
+  });
+
+});
 </script>
 
       </body>
 </html>
+
 
 
 
