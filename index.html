@@ -833,22 +833,16 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 <section id="about">
   <h2 class="section-title">Lead With Who You Serve</h2>
   <div class="about-box">
-    <p> Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.</p><br><br>
-<div class="audio-player">
-  <button id="about-audio-btn" type="button" class="audio-btn">
-    ▶ Listen
+    <p> Founded by a retired public servant in 2025, the Government Workforce Network unites people who’ve dedicated their lives to public service. We support government employees, military members, and veterans with connection, compassion, and career growth—beyond ranks, titles, or boundaries.</p><br><div class="audio-player">
+  <button id="about-audio-btn" type="button">
+    ▶ Listen — Click to hear the founder’s message
   </button>
-  <span class="audio-label">Click to listen</span>
 
-  <div class="audio-progress">
-    <div class="audio-progress-bar"></div>
-  </div>
-
-  <audio id="about-audio" src="about-intro.mp3"></audio>
+  <audio id="about-audio" preload="none">
+    <source src="about-intro.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 </div>
-
-  </div>
-
   <div class="three-columns">
     <div class="info-card">
       <h3>Mission</h3>
@@ -1488,6 +1482,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('about-audio-btn');
+    const audio = document.getElementById('about-audio');
+    if (!btn || !audio) return;
+
+    btn.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '⏸ Pause audio message';
+      } else {
+        audio.pause();
+        btn.textContent = '▶ Listen — Click to hear the founder’s message';
+      }
+    });
+  });
+</script>
+
 </script></body>
 </html>
 
