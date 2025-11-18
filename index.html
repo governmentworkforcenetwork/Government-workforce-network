@@ -1,4 +1,5 @@
 
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -809,7 +810,7 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
   </button>
 
   <audio id="about-audio" preload="none">
-    <source src="audio-intro.mp3" type="audio/mpeg" />
+    <source src="assets/audio/audio-intro.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -1381,8 +1382,81 @@ img.style.width = '100%';
 img.style.height = 'auto';
 })();
 </script>
-<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI">
-  <script>
+<!-- Netlify RUM (keep for analytics) -->
+<script
+  async
+  id="netlify-rum-container"
+  src="/.netlify/scripts/rum"
+  data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
+  data-netlify-deploy-branch="main"
+  data-netlify-deploy-context="production"
+  data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI">
+</script>
+
+<!-- Mobile-only smooth scroll for nav (desktop behavior untouched) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function isMobile () {
+      return window.innerWidth <= 768;
+    }
+
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (!isMobile()) return;
+
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        e.preventDefault();
+
+        const headerHeight = header ? header.offsetHeight : 0;
+        const targetY =
+          target.getBoundingClientRect().top +
+          window.pageYOffset -
+          headerHeight -
+          16;
+
+        window.scrollTo({
+          top: targetY,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script>
+
+<!-- Audio play / pause for the About message -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('about-audio-btn');
+    const audio = document.getElementById('about-audio');
+    if (!btn || !audio) return;
+
+    btn.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play().then(function () {
+          btn.textContent = '⏸ Pause audio message';
+        }).catch(function (err) {
+          console.log('Audio playback blocked:', err);
+        });
+      } else {
+        audio.pause();
+        btn.textContent = '▶ Click to listen';
+      }
+    });
+
+    audio.addEventListener('ended', function () {
+      btn.textContent = '▶ Click to listen';
+    });
+  });
+</script>
+
+</body>
+</html>
   document.addEventListener('DOMContentLoaded', function () {
     // Only customize behavior on mobile; desktop stays untouched
     function isMobile() {
