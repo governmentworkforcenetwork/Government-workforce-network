@@ -734,7 +734,38 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 /* DESKTOP: hide small header logo and center the nav links */
 
-@media (min-width: 769px) {
+@media (min-width: 769px) {/* Align Mission, Vision, Glow+Grow cards */
+
+.about-three-cards {
+
+  display: flex;
+
+  gap: 20px;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.about-three-cards .card {
+
+  flex: 1 1 300px;
+
+  max-width: 360px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+}
+
 
   .logo {
 
@@ -751,6 +782,7 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
   }
 
 }
+  
 </style></head>
 <body>
 <header>
@@ -1713,6 +1745,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       </body>
 </html>
+
 
 
 
