@@ -387,6 +387,33 @@ margin-left: 70px !important;
   <div class="talent-card"> ... </div>
   <div class="talent-card"> ... </div>
 </div>
+    /* Perfect alignment for Mission, Vision, Glow+Grow */
+
+.equal-cards {
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+
+.equal-cards .info-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 100%;
+
+}
 
 <style>
   .talent-container {
@@ -780,33 +807,6 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
     justify-content: center;   /* centers About / Programs / etc. across the top */
 
   }
-
-}
-  /* Perfect alignment for Mission, Vision, Glow+Grow */
-
-.equal-cards {
-
-    display: flex;
-
-    align-items: stretch;
-
-    justify-content: center;
-
-    gap: 20px;
-
-}
-
-
-
-.equal-cards .info-card {
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    height: 100%;
 
 }
   
@@ -1792,6 +1792,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       </body>
 </html>
+
 
 
 
