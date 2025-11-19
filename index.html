@@ -782,6 +782,33 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
   }
 
 }
+  /* Perfect alignment for Mission, Vision, Glow+Grow */
+
+.equal-cards {
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+
+.equal-cards .info-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 100%;
+
+}
   
 </style></head>
 <body>
@@ -899,28 +926,39 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 </audio>
 </div>
-  <div class="three-columns">
+ <div class="three-columns">
+
     <div class="info-card">
-      <h3>Mission</h3>
-      <p> To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.</p>
+
+        <h3>Mission</h3>
+
+        <p>To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.</p>
+
     </div>
+
+
+
     <div class="info-card">
-      <h3>Vision</h3>
-      <p> A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.</p>
+
+        <h3>Vision</h3>
+
+        <p>A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.</p>
+
     </div>
+
+
+
     <div class="info-card">
-      <h3>Glow + Grow Initiative</h3>
-      <p> Empowerment, Connection, and Purpose. A signature series celebrating service and growth through empowerment circles, mixers, and recognition galas — blending learning with inspiration and joy.</p>
+
+        <h3>Glow + Grow Initiative</h3>
+
+        <p>Empowerment, Connection, and Purpose. A signature series celebrating service and growth through empowerment circles, mixers, and recognition galas — blending learning with inspiration and joy.</p>
+
     </div>
+
+</div>
   </div>
 </section>
-  <div class="about-three-cards">
-
-  <div class="card"> ... Mission ... </div>
-
-  <div class="card"> ... Vision ... </div>
-
-  <div class="card"> ... Glow + Grow Initiative ... </div>
 
 </div>
   
@@ -1754,6 +1792,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       </body>
 </html>
+
 
 
 
