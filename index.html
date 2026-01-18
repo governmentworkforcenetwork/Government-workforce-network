@@ -1,4 +1,6 @@
 
+	
+
 
 <html lang="en">
 <head>
@@ -240,280 +242,280 @@ margin-left: 70px !important;
 
 /* ===== HERO SECTION WITH FADE-IN IMAGE ===== */
 #hero {
-  position: relative;
-  height: 100vh;
-  background: url("assets/hero-group-photo.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  opacity: 0;                    /* Start transparent */
-  animation: fadeBg 2.5s ease-in-out forwards; /* Background fade-in */
+position: relative;
+height: 100vh;
+background: url("assets/hero-group-photo.jpg") center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #fff;
+overflow: hidden;
+opacity: 0; /* Start transparent */
+animation: fadeBg 2.5s ease-in-out forwards; /* Background fade-in */
 }
 
 /* Subtle overlay for readability */
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.35);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 
 /* Hero content */
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 20px;
+position: relative;
+z-index: 2;
+max-width: 800px;
+padding: 0 20px;
 }
 
 /* Logo */
 .hero-logo {
-  width: 110px;
-  height: auto;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
-  opacity: 0;
-  animation: fadeInUp 1.2s ease-out forwards;
-  animation-delay: 0.8s; /* starts after background fades in */
+width: 110px;
+height: auto;
+margin-bottom: 20px;
+filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+opacity: 0;
+animation: fadeInUp 1.2s ease-out forwards;
+animation-delay: 0.8s; /* starts after background fades in */
 }
 
 /* Blurb */
 .hero-content h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.4;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
-  opacity: 0;
-  animation: fadeInUp 1.4s ease-out forwards;
-  animation-delay: 1.2s;
+font-size: 2rem;
+font-weight: 700;
+line-height: 1.4;
+text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+opacity: 0;
+animation: fadeInUp 1.4s ease-out forwards;
+animation-delay: 1.2s;
 }
 
 /* Animations */
 @keyframes fadeBg {
-  0% { opacity: 0; transform: scale(1.02); }
-  100% { opacity: 1; transform: scale(1); }
+0% { opacity: 0; transform: scale(1.02); }
+100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+0% {
+opacity: 0;
+transform: translateY(20px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  #hero {
-    height: 75vh;
-  }
-  .hero-logo {
-    width: 90px;
-  }
-  .hero-content h1 {
-    font-size: 1.4rem;
-    padding: 0 15px;
-  }
+#hero {
+height: 75vh;
+}
+.hero-logo {
+width: 90px;
+}
+.hero-content h1 {
+font-size: 1.4rem;
+padding: 0 15px;
+}
 }
 /* HERO IMAGE CONTAINER */
 .hero-image {
-  position: relative;
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp 1.6s ease-out forwards;
-  animation-delay: 1.6s;
+position: relative;
+margin-top: 35px;
+display: flex;
+justify-content: center;
+align-items: center;
+animation: fadeInUp 1.6s ease-out forwards;
+animation-delay: 1.6s;
 }
 
 /* SOFT GLOW BEHIND PHOTO */
 .hero-glow {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.45) 0%,
-    rgba(255, 255, 255, 0.15) 45%,
-    rgba(0, 0, 0, 0) 80%
-  );
-  filter: blur(40px);
-  z-index: 1;
+position: absolute;
+width: 420px;
+height: 420px;
+border-radius: 50%;
+background: radial-gradient(
+circle,
+rgba(255, 255, 255, 0.45) 0%,
+rgba(255, 255, 255, 0.15) 45%,
+rgba(0, 0, 0, 0) 80%
+);
+filter: blur(40px);
+z-index: 1;
 }
 
 /* TEAM PHOTO */
 .hero-image img {
-  position: relative;
-  z-index: 2;
-  width: 420px;
-  max-width: 90%;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+z-index: 2;
+width: 420px;
+max-width: 90%;
+border-radius: 15px;
+box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-image img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+transform: scale(1.03);
+box-shadow: 0 8px 22px rgba(0,0,0,0.5);
 }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .hero-glow {
-    width: 300px;
-    height: 300px;
-    filter: blur(25px);
-  }
-  .hero-image img {
-    width: 300px;
-  }
+.hero-glow {
+width: 300px;
+height: 300px;
+filter: blur(25px);
+}
+.hero-image img {
+width: 300px;
+}
 }
 <div class="talent-container">
-  <div class="talent-card"> ... </div>
-  <div class="talent-card"> ... </div>
+<div class="talent-card"> ... </div>
+<div class="talent-card"> ... </div>
 </div>
-  
+
 <style>
-  .talent-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .talent-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 400px;
-    padding: 20px;
-    text-align: center;
-  }
+.talent-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+.talent-card {
+background: white;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+width: 400px;
+padding: 20px;
+text-align: center;
+}
 /* ===== Section Titles (Lead With, Mission, Vision) ===== */
 .section-title {
-  margin-top: 40px;  /* reduced top spacing */
-  margin-bottom: 15px; /* tightens below title */
-  text-align: center;
+margin-top: 40px; /* reduced top spacing */
+margin-bottom: 15px; /* tightens below title */
+text-align: center;
 }
 /* ===== Content Boxes (Mission, Vision, etc.) ===== */
 .about-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 30px 40px;
-  margin: 40px auto; /* reduces top gap between title & box */
-  max-width: 700px;
-  width: 85%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 12px;
+padding: 30px 40px;
+margin: 40px auto; /* reduces top gap between title & box */
+max-width: 700px;
+width: 85%;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+text-align: center;
 }
 /* Layout for the 3-column section */
 .three-columns {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap; /* stacks on mobile */
-  margin-top: 40px;
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap; /* stacks on mobile */
+margin-top: 40px;
 }
 
 .info-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 25px 30px;
-  width: 300px; /* each card width */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 12px;
+padding: 25px 30px;
+width: 300px; /* each card width */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+text-align: center;
 }
 
 .info-card h3 {
-  margin-bottom: 15px;
-  color: #002855; /* navy tone */
+margin-bottom: 15px;
+color: #002855; /* navy tone */
 }
 
 .section-title {
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 20px;
+text-align: center;
+margin-top: 60px;
+margin-bottom: 20px;
 }
 
 .about-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 30px 40px;
-  margin: 0 auto 40px;
-  max-width: 800px;
-  text-align: center;
-  }
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 12px;
+padding: 30px 40px;
+margin: 0 auto 40px;
+max-width: 800px;
+text-align: center;
+}
 
 }
 
 /* Fix anchor scroll position for 'About' section */
 #about {
-  scroll-margin-top: 40px; /* adjust this number based on your navbar height */
-  padding-top: 20px; /* optional small spacing for breathing room */
+scroll-margin-top: 40px; /* adjust this number based on your navbar height */
+padding-top: 20px; /* optional small spacing for breathing room */
 }
-  /* Mobile-only: make sure section headings are visible
-   when tapping nav links (About, Programs, Talent Connect, etc.) */
+/* Mobile-only: make sure section headings are visible
+when tapping nav links (About, Programs, Talent Connect, etc.) */
 @media (max-width: 768px) {
-  #about,
-  #programs,
-  #be-glow,
-  #services,
-  #talent-connect,
-  #community-services,
-  #job-openings {
-    scroll-margin-top: 120px;  /* clears the logo + stacked menu on phone */
-  }
+#about,
+#programs,
+#be-glow,
+#services,
+#talent-connect,
+#community-services,
+#job-openings {
+scroll-margin-top: 120px; /* clears the logo + stacked menu on phone */
 }
-  /* MOBILE: smaller offset so headings are fully visible */
+}
+/* MOBILE: smaller offset so headings are fully visible */
 @media (max-width: 768px) {
-  #about,
-  #programs,
-  #be-glow,
-  #services,
-  #talent-connect,
-  #community-services,
-  #job-openings {
-    scroll-margin-top: 60px;   /* smaller gap for phones */
-  }
+#about,
+#programs,
+#be-glow,
+#services,
+#talent-connect,
+#community-services,
+#job-openings {
+scroll-margin-top: 60px; /* smaller gap for phones */
 }
-  .hero-logo {
+}
+.hero-logo {
 
-  display: block;
+display: block;
 
-  margin: 40px auto 24px;  /* centers it and gives breathing room above the heading */
+margin: 40px auto 24px; /* centers it and gives breathing room above the heading */
 
-  max-width: 200px;        /* make it bigger; change to 320/340 if you want even larger */
+max-width: 200px; /* make it bigger; change to 320/340 if you want even larger */
 
 }
 .audio-player {
-  margin-top: 10px;
+margin-top: 10px;
 }
 
 .listen-link {
-  display: inline-block;
-  margin-top: 4px;
-  font-weight: 600;
-  color: #0066cc;
-  text-decoration: underline;
-  cursor: pointer;
+display: inline-block;
+margin-top: 4px;
+font-weight: 600;
+color: #0066cc;
+text-decoration: underline;
+cursor: pointer;
 }
 
 .listen-link:hover {
-  opacity: 0.8;
+opacity: 0.8;
 }
 </style>
 
@@ -690,22 +692,22 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 /* tiny helper for the checkbox row */
 .disclaimer-ack { margin-top: 10px; display:flex; gap:10px; align-items:flex-start; color:#fff; }
 .disclaimer-ack input { margin-top: 2px; }
-  
-  /* Mobile-only: make anchor jumps land with headings fully visible */
+
+/* Mobile-only: make anchor jumps land with headings fully visible */
 @media (max-width: 768px) {
-  :target {
-    scroll-margin-top: 140px; /* fine-tune if needed (120–160 range) */
-  }
+:target {
+scroll-margin-top: 140px; /* fine-tune if needed (120–160 range) */
+}
 }
 /* Invisible anchors used ONLY to adjust scroll position on mobile */
 
 .mobile-offset-anchor {
 
-  display: block;
+display: block;
 
-  position: relative;
+position: relative;
 
-  height: 0;
+height: 0;
 
 }
 
@@ -715,11 +717,11 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 @media (min-width: 769px) {
 
-  .mobile-offset-anchor {
+.mobile-offset-anchor {
 
-    top: 0;
+top: 0;
 
-  }
+}
 
 }
 
@@ -727,11 +729,11 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 @media (max-width: 768px) {
 
-  .mobile-offset-anchor {
+.mobile-offset-anchor {
 
-    top: -140px;  /* adjust to -130 / -150 later if you want tiny tweaks */
+top: -140px; /* adjust to -130 / -150 later if you want tiny tweaks */
 
-  }
+}
 
 }
 
@@ -741,15 +743,15 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 .about-three-cards {
 
-  display: flex;
+display: flex;
 
-  gap: 20px;
+gap: 20px;
 
-  justify-content: center;
+justify-content: center;
 
-  align-items: stretch;
+align-items: stretch;
 
-  flex-wrap: wrap;
+flex-wrap: wrap;
 
 }
 
@@ -757,72 +759,72 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 .about-three-cards .card {
 
-  flex: 1 1 300px;
+flex: 1 1 300px;
 
-  max-width: 360px;
+max-width: 360px;
 
-  display: flex;
+display: flex;
 
-  flex-direction: column;
+flex-direction: column;
 
-  justify-content: space-between;
+justify-content: space-between;
+
+}
+
+
+.logo {
+
+display: none; /* hides the small logo + 'Government Workforce Network LLC' in the header */
 
 }
 
 
-  .logo {
 
-    display: none;             /* hides the small logo + 'Government Workforce Network LLC' in the header */
+nav {
 
-  }
-
-
-
-  nav {
-
-    justify-content: center;   /* centers About / Programs / etc. across the top */
-
-  }
+justify-content: center; /* centers About / Programs / etc. across the top */
 
 }
-  /* Mission / Vision / Glow + Grow — aligned in one row on desktop */
+
+}
+/* Mission / Vision / Glow + Grow — aligned in one row on desktop */
 
 @media (min-width: 900px) {
 
-  .three-columns.equal-cards {
+.three-columns.equal-cards {
 
-    display: flex;
+display: flex;
 
-    flex-direction: row;
+flex-direction: row;
 
-    flex-wrap: nowrap;          /* ❗ don’t allow wrapping */
+flex-wrap: nowrap; /* ❗ don’t allow wrapping */
 
-    justify-content: center;
+justify-content: center;
 
-    align-items: stretch;
+align-items: stretch;
 
-    gap: 24px;
-
-  }
-
-
-
-  .three-columns.equal-cards .info-card {
-
-    flex: 1 1 0;
-
-    max-width: 340px;           /* keeps them narrow enough to fit */
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-  }
+gap: 24px;
 
 }
-  
+
+
+
+.three-columns.equal-cards .info-card {
+
+flex: 1 1 0;
+
+max-width: 340px; /* keeps them narrow enough to fit */
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+}
+
+}
+
 </style></head>
 <body>
 <header>
@@ -853,38 +855,38 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 </nav>
 </header>
 <section id="hero">
-  <div class="hero-overlay fade-bg">
-    <div class="hero-content">
-      <img src="logo.jpg" alt="Government Workforce Network Logo" class="hero-logo fade-in" />
-      <h1 class="fade-in-delayed">
-        Together, Protecting and Promoting Employee Well-Being
-      </h1>
-      <div class="hero-image fade-in-delayed-2">
-        <div class="hero-glow"></div>
-        <img src="hero.png" alt="Diverse Workforce Team" />
-      </div>
-    </div>
-  </div>
+<div class="hero-overlay fade-bg">
+<div class="hero-content">
+<img src="logo.jpg" alt="Government Workforce Network Logo" class="hero-logo fade-in" />
+<h1 class="fade-in-delayed">
+Together, Protecting and Promoting Employee Well-Being
+</h1>
+<div class="hero-image fade-in-delayed-2">
+<div class="hero-glow"></div>
+<img src="hero.png" alt="Diverse Workforce Team" />
+</div>
+</div>
+</div>
 </section>
 <span id="about-anchor" class="mobile-offset-anchor"></span>
 
 <section id="about">
 
-  <!-- Lead With Who You Serve + Mission/Vision content here -->
+<!-- Lead With Who You Serve + Mission/Vision content here -->
 
 </section>
 <section id="about">
-  <h2 class="section-title">Lead With Who You Serve</h2>
-  <div class="about-box">
-  <p>
+<h2 class="section-title">Lead With Who You Serve</h2>
+<div class="about-box">
+<p>
 
-  Founded by a retired public servant in 2025, the Government Workforce Network
+Founded by a retired public servant in 2025, the Government Workforce Network
 
-  unites people who’ve dedicated their lives to public service. We support
+unites people who’ve dedicated their lives to public service. We support
 
-  government employees, military members, and veterans with connection,
+government employees, military members, and veterans with connection,
 
-  compassion, and career growth—beyond ranks, titles, or boundaries.
+compassion, and career growth—beyond ranks, titles, or boundaries.
 
 </p>
 <div>
@@ -892,91 +894,91 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 
 <div class="audio-player">
 
-  <button class="audio-play-pause"
+<button class="audio-play-pause"
 
-          type="button"
+type="button"
 
-          aria-label="Play welcome message">
+aria-label="Play welcome message">
 
-    ▶
+▶
 
-  </button>
-
-
-
-  <div class="audio-info">
-
-    <span class="audio-label">Welcome Message</span>
-
-    <div class="audio-progress">
-
-      <div class="audio-progress-bar"></div>
-
-    </div>
-
-    <span class="audio-time" aria-label="Elapsed time">0:00</span>
-
-  </div>
+</button>
 
 
 
-  <audio id="about-intro-audio" preload="none">
+<div class="audio-info">
 
-    <source src="about-intro.mp3" type="audio/mpeg" />
+<span class="audio-label">Welcome Message</span>
 
-    Your browser does not support the audio element.
+<div class="audio-progress">
 
-  </audio>
+<div class="audio-progress-bar"></div>
+
+</div>
+
+<span class="audio-time" aria-label="Elapsed time">0:00</span>
+
+</div>
+
+
+
+<audio id="about-intro-audio" preload="none">
+
+<source src="about-intro.mp3" type="audio/mpeg" />
+
+Your browser does not support the audio element.
+
+</audio>
 
 </p></div>
 
 
 <audio id="about-audio" preload="none">
 
-  <source src="audio-intro" type="audio/mpeg" />
+<source src="audio-intro" type="audio/mpeg" />
 
-  Your browser does not support the audio element.
+Your browser does not support the audio element.
 
 </audio>
 </div>
- <div class="three-columns">
+<div class="three-columns">
 
-    <div class="info-card">
+<div class="info-card">
 
-        <h3>Mission</h3>
+<h3>Mission</h3>
 
-        <p>To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.</p>
-
-    </div>
-
-
-
-    <div class="info-card">
-
-        <h3>Vision</h3>
-
-        <p>A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.</p>
-
-    </div>
+<p>To build a global, rank-free community for current and former government employees and military members — a trusted space where well-being, mentorship, leadership, and workforce development come first.</p>
 
 </div>
-  </div>
+
+
+
+<div class="info-card">
+
+<h3>Vision</h3>
+
+<p>A world where every public servant — from clerks to directors, from new recruits to retirees — feels supported, valued, and empowered to thrive. Leadership, mentorship, and well-being are not privileges of rank, but rights of every employee in public service.</p>
+
+</div>
+
+</div>
+</div>
 </section>
 
 </div>
-  
+
 <span id="programs-anchor" class="mobile-offset-anchor"></span>
 
 <section id="programs">
 
-  <!-- Our Programs content -->
+<!-- Our Programs content -->
 
 </section>
 
 <section class="section" id="programs">
 <div class="container">
 <div class="title-wrap">
-<h2 class="section-title dark">Our Programs: Glow + Grow Initiative</h2>
+<h2 class="section-title dark">Our Programs - Glow + Grow Initiative</h2>
 <div class="rule"></div>
 </div>
 <div class="cards-grid">
@@ -999,22 +1001,22 @@ font-size: 12px; opacity:.8; margin-bottom:6px;
 </div>
 </article>
 <article class="service-card">
-<div class="svc-img"><img alt="Professional growth workshops" src="professional-growth.png"/></div>
+<div class="svc-img"><img alt="Branded By Marivel" src="branded-by-marivel-logo.png"/></div>
 
 <div class="svc-body">
-<h3>Professional Growth</h3>
-<p><strong>Empowerment Circles, Coaching &amp; Confidence Building</strong></p>
-<p>Practical programs for professional success — from interview prep and leadership development to performance and public-speaking coaching.</p>
+<h3>Branded By Marivel</h3>
+<p><strong>Personal Branding & Supplemental Income</strong></p>
+<p>A signature empowerment program guiding individuals to turn creativity into influence – building a powerful personal brand while creating intentional income beyond traditional paths. Learn more at www.brandedbymarivel.com</p>
 </div>
 </article>
 </div>
 </div>
 </section>
-  <span id="be-glow-anchor" class="mobile-offset-anchor"></span>
+<span id="be-glow-anchor" class="mobile-offset-anchor"></span>
 
 <section id="be-glow">
 
-  <!-- Be Part of the Glow content -->
+<!-- Be Part of the Glow content -->
 
 </section>
 <section class="section" id="be-glow">
@@ -1058,11 +1060,11 @@ Let's build a movement together — one that unites connection, compassion, and 
 </div>
 </section>
 <!-- ======= Paid Services ======= -->
-  <span id="services-anchor" class="mobile-offset-anchor"></span>
+<span id="services-anchor" class="mobile-offset-anchor"></span>
 
 <section id="services">
 
-  <!-- Professional & Organizational Services content -->
+<!-- Professional & Organizational Services content -->
 
 </section>
 <section class="section" id="services">
@@ -1102,11 +1104,11 @@ Let's build a movement together — one that unites connection, compassion, and 
 </div>
 </div>
 </section>
-  <span id="talent-connect-anchor" class="mobile-offset-anchor"></span>
+<span id="talent-connect-anchor" class="mobile-offset-anchor"></span>
 
 <section id="talent-connect">
 
-  <!-- Talent Connect cards + forms -->
+<!-- Talent Connect cards + forms -->
 
 </section>
 <section id="talent-connect" class="section-pad">
@@ -1126,8 +1128,7 @@ Let's build a movement together — one that unites connection, compassion, and 
 <p>Add your details to our private list, shared with employers upon request.
 Service fee: $9.99/month.</p>
 </div>
-<a class="btn-primary" href="#job-seeker-form">Click Here</a>
-
+<a class="btn" href="#job-seeker-form">Launching Soon</a>
 </article>
 
 <!-- Employer Request card -->
@@ -1140,85 +1141,84 @@ Service fee: $9.99/month.</p>
 <h3>Employer Talent Request</h3>
 <p>Have a vacancy to fill? Submit your request. We’ll share relevant candidate listings from our community.</p>
 </div>
-<a class="btn-primary" href="#employer-form">Click Here</a>
-
+<a class="btn" href="#employer-form">Launching Soon</a>
 </article>
 </div>
 
-<!-- JOB SEEKER FORM -->
-<div id="job-seeker-form" class="form-panel">
-<h4>Talent Listing — Job Seeker Form</h4>
 
-<!-- Netlify form -->
-<form method='POST' name='talent-listing'>
-<input type="hidden" name="form-name" value="talent-listing">
-<div class="grid-2">
-<div><label>Full Name*<br><input type="text" name="name" required></label></div>
-<div><label>Email*<br><input type="email" name="email" required></label></div>
-<div><label>Phone*<br><input type="tel" name="phone" required></label></div>
-<div><label>City/State (optional)<br><input type="text" name="location"></label></div>
-<div >
-<label>Target Roles / Skills*<br><input type="text" name="roles" required></label>
-</div>
-<div >
-<label>LinkedIn / Portfolio (optional)<br><input type="text" name="portfolio"></label>
-</div>
-</div>
 
-<div class="disclaimer">
-<strong>Disclaimer & Acknowledgment</strong>
-<p>Government Workforce Network LLC (“GWN”) provides a listing & referral service. GWN is not an employment agency and does not guarantee interviews, employment, or outcomes. By submitting, you authorize GWN to share your information with interested employers and agree that GWN is not liable for any hiring decisions or interactions between you and third parties.</p>
-<label class="disclaimer-ack">
-<input type="checkbox" name="acknowledge" required>
-<span>I have read and agree to the Disclaimer & Acknowledgment.</span>
-</label>
-</div>
 
-<button class="submit" type="submit">Submit</button>
-</form>
-</div>
 
-<!-- EMPLOYER FORM -->
-<div id="employer-form" class="form-panel">
-<h4>Employer Talent Request</h4>
-<p>Tell us what you’re hiring for and we’ll share relevant candidate listings from our community.</p>
 
-<form method='POST' name='employer-talent-request'>
-<input type="hidden" name="form-name" value="employer-talent-request">
-<div class="grid-2">
-<div><label>Organization*<br><input type="text" name="org" required></label></div>
-<div><label>Contact Name*<br><input type="text" name="contact" required></label></div>
-<div><label>Email*<br><input type="email" name="email" required></label></div>
-<div><label>Phone*<br><input type="tel" name="phone" required></label></div>
-<div><label>Job Titles / Departments*<br><input type="text" name="jobs" required></label></div>
-<div><label>Job URL (optional)<br><input type="text" name="joburl"></label></div>
-<div >
-<label>Notes for Matching (skills, location, clearance, etc.)<br>
-<textarea name="notes"></textarea>
-</label>
-</div>
-</div>
 
-<div class="disclaimer">
-<strong>Disclaimer & Acknowledgment</strong>
-<p>GWN shares candidate listings as an informational courtesy only and does not perform background checks or candidate verification. GWN is not an employment agency and makes no warranties about candidate suitability. Your organization is solely responsible for compliance with all applicable laws (including EEO/ADA) and its own hiring decisions. By submitting, you agree GWN is not liable for outcomes, decisions, or communications between your organization and candidates.</p>
-<label class="disclaimer-ack">
-<input type="checkbox" name="acknowledge" required>
-<span>I have read and agree to the Disclaimer & Acknowledgment.</span>
-</label>
-</div>
 
-<button class="submit" type="submit">Submit</button>
-</form>
-</div>
-</div>
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ======= Community Free Services ======= -->
-  <span id="community-services-anchor" class="mobile-offset-anchor"></span>
+<span id="community-services-anchor" class="mobile-offset-anchor"></span>
 
 <section id="community-services">
 
-  <!-- Community Free Services content -->
+<!-- Community Free Services content -->
 
 </section>
 <section class="section" id="community-services">
@@ -1231,17 +1231,17 @@ Service fee: $9.99/month.</p>
 Our way of giving back — complimentary services to support nonprofits and start-ups in building stronger communities and impactful missions.
 </p>
 <div class="community-grid">
-<!-- Card 1 -->
-<article class="community-card">
-<img alt="Nonprofit team posting a job opening" src="free-jobposting.png"/>
 
-<div class="body">
-<h3>Free Job Posting</h3>
-<p style="margin:6px 0 0; color:#333; font-size:15px;">For Nonprofits &amp; Start-Ups (1 per year)</p>
-<p style="margin:10px 0 0; color:#555; font-size:14px;">Reach mission-aligned professionals and grow your team.</p>
-<button class="btn alt" onclick="openModal('fs-np-job')" style="margin-top:12px;">Click Here</button>
-</div>
-</article>
+
+
+
+
+
+
+
+
+
+
 <!-- Card 2 -->
 <article class="community-card">
 <img alt="Designer creating a logo for a nonprofit" src="free-logodesign.png"/>
@@ -1257,11 +1257,11 @@ Our way of giving back — complimentary services to support nonprofits and star
 </div>
 
 <!-- ======= Job Openings ======= -->
-  <span id="job-openings-anchor" class="mobile-offset-anchor"></span>
+<span id="job-openings-anchor" class="mobile-offset-anchor"></span>
 
 <section id="job-openings">
 
-  <!-- Job Openings content -->
+<!-- Job Openings content -->
 
 </section>
 <section class="section" id="job-openings" style="background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,248,251,.98));">
@@ -1519,282 +1519,288 @@ img.style.height = 'auto';
 </script>
 <!-- Netlify RUM (keep for analytics) -->
 <script
-  async
-  id="netlify-rum-container"
-  src="/.netlify/scripts/rum"
-  data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
-  data-netlify-deploy-branch="main"
-  data-netlify-deploy-context="production"
-  data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI">
+async
+id="netlify-rum-container"
+src="/.netlify/scripts/rum"
+data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a"
+data-netlify-deploy-branch="main"
+data-netlify-deploy-context="production"
+data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MTU0NGY1YzAwNjU4ZGE2MDNkYmI1NiIsImlzc3VlciI6Im5mc2VydmVyIn0._fyzkVgy5AJbYFh9LQd4FD6DkdEPdE4ttNt-21jWewI">
 </script>
 
 <!-- Mobile-only smooth scroll for nav (desktop behavior untouched) -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    function isMobile () {
-      return window.innerWidth <= 768;
-    }
+document.addEventListener('DOMContentLoaded', function () {
+function isMobile () {
+return window.innerWidth <= 768;
+}
 
-    const header = document.querySelector('header');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+const header = document.querySelector('header');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        if (!isMobile()) return;
+navLinks.forEach(function (link) {
+link.addEventListener('click', function (e) {
+if (!isMobile()) return;
 
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        if (!target) return;
+const targetId = this.getAttribute('href').substring(1);
+const target = document.getElementById(targetId);
+if (!target) return;
 
-        e.preventDefault();
+e.preventDefault();
 
-        const headerHeight = header ? header.offsetHeight : 0;
-        const targetY =
-          target.getBoundingClientRect().top +
-          window.pageYOffset -
-          headerHeight -
-          16;
+const headerHeight = header ? header.offsetHeight : 0;
+const targetY =
+target.getBoundingClientRect().top +
+window.pageYOffset -
+headerHeight -
+16;
 
-        window.scrollTo({
-          top: targetY,
-          behavior: 'smooth'
-        });
-      });
-    });
-  });
+window.scrollTo({
+top: targetY,
+behavior: 'smooth'
+});
+});
+});
+});
 </script>
 
 <!-- Audio play / pause for the About message -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('about-audio-btn');
-    const audio = document.getElementById('about-audio');
-    if (!btn || !audio) return;
+document.addEventListener('DOMContentLoaded', function () {
+const btn = document.getElementById('about-audio-btn');
+const audio = document.getElementById('about-audio');
+if (!btn || !audio) return;
 
-    btn.addEventListener('click', function () {
-      if (audio.paused) {
-        audio.play().then(function () {
-          btn.textContent = '⏸ Pause audio message';
-        }).catch(function (err) {
-          console.log('Audio playback blocked:', err);
-        });
-      } else {
-        audio.pause();
-        btn.textContent = '▶ Click to listen';
-      }
-    });
+btn.addEventListener('click', function () {
+if (audio.paused) {
+audio.play().then(function () {
+btn.textContent = '⏸ Pause audio message';
+}).catch(function (err) {
+console.log('Audio playback blocked:', err);
+});
+} else {
+audio.pause();
+btn.textContent = '▶ Click to listen';
+}
+});
 
-    audio.addEventListener('ended', function () {
-      btn.textContent = '▶ Click to listen';
-    });
-  });
+audio.addEventListener('ended', function () {
+btn.textContent = '▶ Click to listen';
+});
+});
 </script>
+
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="dd350737-b167-4737-ba6f-cd4cbec4021a" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZGQzNTA3MzctYjE2Ny00NzM3LWJhNmYtY2Q0Y2JlYzQwMjFhIiwiYWNjb3VudF9pZCI6IjY4ZTVlZTkwODI2MTg3OTc5NzljMWMyNSIsImRlcGxveV9pZCI6IjY5MWQxMjcyNTg5OTNlMDAwODNkNjNkNCIsImlzc3VlciI6Im5mc2VydmVyIn0.QugYBQz60QI91kve-3fTKexhDC1SegzDkCd3SD-Ga8o"></script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const btn = document.getElementById('about-audio-btn');
+const audio = document.getElementById('about-audio');
+if (!btn || !audio) return;
+
+btn.addEventListener('click', function () {
+if (audio.paused) {
+audio.play().then(function () {
+btn.textContent = '⏸ Pause audio message';
+}).catch(function (err) {
+console.log('Audio playback blocked:', err);
+});
+} else {
+audio.pause();
+btn.textContent = '▶ Click to listen';
+}
+});
+
+audio.addEventListener('ended', function () {
+btn.textContent = '▶ Click to listen';
+});
+});
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+const btn = document.getElementById('about-audio-btn');
+
+const audio = document.getElementById('about-audio');
+
+if (!btn || !audio) return;
+
+
+
+btn.addEventListener('click', function () {
+
+if (audio.paused) {
+
+audio.play().then(function () {
+
+btn.textContent = '⏸ Pause audio message';
+
+}).catch(function (err) {
+
+console.log('Audio playback issue:', err);
+
+alert('Audio file could not be played. Please check the audio path.');
+
+});
+
+} else {
+
+audio.pause();
+
+btn.textContent = '▶ Click to listen';
+
+}
+
+});
+
+
+
+audio.addEventListener('ended', function () {
+
+btn.textContent = '▶ Click to listen';
+
+});
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Only customize behavior on mobile; desktop stays untouched
-    function isMobile() {
-      return window.innerWidth <= 768;
-    }
-    const header = document.querySelector('header'); // your top bar
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        if (!isMobile()) {
-          // Let desktop behave with normal anchor jumps
-          return;
-        }
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        if (!target) {
-          // If there is no element with that id, do nothing special
-          return;
-        }
-        // Stop the normal jump
-        e.preventDefault();
-        const headerHeight = header ? header.offsetHeight : 0;
-        // Where we want to land: top of section minus header height,
-        // minus a little extra breathing room (16px)
-        const targetY = target.getBoundingClientRect().top + window.pageYOffset
-                        - headerHeight - 16;
-        window.scrollTo({
-          top: targetY,
-          behavior: 'smooth'
-        });
-      });
-    });
-  });
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('about-audio-btn');
-    const audio = document.getElementById('about-audio');
-    if (!btn || !audio) return;
 
-    btn.addEventListener('click', function () {
-      if (audio.paused) {
-        audio.play().then(function () {
-          btn.textContent = '⏸ Pause audio message';
-        }).catch(function (err) {
-          console.log('Audio playback blocked:', err);
-        });
-      } else {
-        audio.pause();
-        btn.textContent = '▶ Click to listen';
-      }
-    });
 
-    audio.addEventListener('ended', function () {
-      btn.textContent = '▶ Click to listen';
-    });
-  });
-</script>
-     <script>
 
-document.addEventListener('DOMContentLoaded', function () {
 
-  const btn = document.getElementById('about-audio-btn');
 
-  const audio = document.getElementById('about-audio');
-
-  if (!btn || !audio) return;
-
-
-
-  btn.addEventListener('click', function () {
-
-    if (audio.paused) {
-
-      audio.play().then(function () {
-
-        btn.textContent = '⏸ Pause audio message';
-
-      }).catch(function (err) {
-
-        console.log('Audio playback issue:', err);
-
-        alert('Audio file could not be played. Please check the audio path.');
-
-      });
-
-    } else {
-
-      audio.pause();
-
-      btn.textContent = '▶ Click to listen';
-
-    }
-
-  });
-
-
-
-  audio.addEventListener('ended', function () {
-
-    btn.textContent = '▶ Click to listen';
-
-  });
-
-});
-</script>
-        <script>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const audio = document.getElementById('about-intro-audio');
-
-  const player = document.querySelector('.audio-player');
-
-  if (!audio || !player) return;
-
-
-
-  const button = player.querySelector('.audio-play-pause');
-
-  const bar = player.querySelector('.audio-progress-bar');
-
-  const time = player.querySelector('.audio-time');
-
-
-
-  function formatTime(sec) {
-
-    if (!sec || isNaN(sec)) return '0:00';
-
-    const s = Math.floor(sec % 60);
-
-    const m = Math.floor(sec / 60);
-
-    return m + ':' + (s < 10 ? '0' + s : s);
-
-  }
-
-
-
-  button.addEventListener('click', function () {
-
-    if (audio.paused) {
-
-      audio.play().then(function () {
-
-        button.textContent = '⏸';
-
-        button.setAttribute('aria-label', 'Pause welcome message');
-
-      }).catch(function (err) {
-
-        console.log('Audio play error:', err);
-
-      });
-
-    } else {
-
-      audio.pause();
-
-      button.textContent = '▶';
-
-      button.setAttribute('aria-label', 'Play welcome message');
-
-    }
-
-  });
-
-
-
-  audio.addEventListener('timeupdate', function () {
-
-    if (audio.duration) {
-
-      const percent = (audio.currentTime / audio.duration) * 100;
-
-      bar.style.width = percent + '%';
-
-      time.textContent = formatTime(audio.currentTime);
-
-    }
-
-  });
-
-
-
-  audio.addEventListener('ended', function () {
-
-    button.textContent = '▶';
-
-    button.setAttribute('aria-label', 'Play welcome message');
-
-    bar.style.width = '0%';
-
-    time.textContent = '0:00';
-
-  });
-
-});
-
-</script>
-
-      </body>
-</html>
 
 
 
